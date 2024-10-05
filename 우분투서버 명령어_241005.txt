@@ -1,0 +1,173 @@
+.ip??curl -4 ifconfig.me  ->    118.129.176.101 , 115.92.157.113, 
+upbit API IP :  125.240.27.173,118.129.176.103,118.129.176.21,125.240.27.61,218.150.4.131 (YJ Newlight) ((2024/08/03)
+df -h  : 용량 확인 
+sudo nano /etc/default/console-setup  : 폰트 크기 설정
+pip install -r requirements.txt
+k2@debian:~$
+에서 su - 로 전환
+sudo passwd root
+
+sudo visudo   관리자모드 설정
+k2 ALL=(ALL) NOPASSWD:ALL   관리자모드 설정
+
+python3 --version : 파이썬 버전 확인
+2. venv 모듈 설치
+sudo apt update
+sudo apt install python3-venv
+# 가상환경 생성
+python3 -m venv myenvk2~
+source myenvk/bin/activate       :  노트북 리눅스(영주창원)
+source myenvk2/bin/activate     :  리눅스채굴
+source myenvk3/bin/activate     :  태평서버k3 python 실행
+source venv_k38/bin/activate     :   서버 k의 가상환경 venv_k38 활성화
+source myenvk5/bin/activate     :   데비안 리눅스 KASPA 채굴 (   kaspa:qypu4a44ad9yjhuh6asnwqfrrfzr0yq8l92979z8e85d3mxckt9cevqr360k5c8   : 파이오넥스)
+
+root@raspberrypi:~# 
+source myenvkpi/bin/activate
+
+source /home/k/venv_k38/bin/activate
+외부 접속 
+curl ifconfig.me 
+curl 사용 
+sudo apt update
+sudo apt install curl
+관리자권한 부여
+sudo usermod -aG sudo username(k2)
+su - username
+그래픽카드 
+lspci | grep VGA
+01:00.0 VGA compatible controller: NVIDIA Corporation GK106 [GeForce GTX 650 Ti Boost] (rev a1)
+
+sudo apt install automake autoconf libcurl4-openssl-dev libjansson-dev libssl-dev libgmp-dev -y
+
+
+Your API key is: 1ad5206660fe40dfaf488a1ee3a65bd5  :   https://newsapi.org/register/success
+(myenv) k@kimlab869:~/Demo_okx$ ps ax | grep .py -8dnjs 7일 스톱시킨 백그라운드 프로그램. 잔고 충전 프로그램 업글후 다시 돌려야
+
+(myenv) k@kimlab869:~/Demo_okx$ curl -s http://checkip.amazonaws.com
+
+find /var/log -type f -mtime +30 -exec rm -f {} \;
+#30일이상 파일삭제
+뉴스 데이터 수집 중 에러: unsupported operand type(s) for +: 'NoneType' and 'str'
+
+nohup python3 Auto.py > output1.log 2>&1 &
+nohup python3 /path/to/A1.py > /dev/null 2>&1 &
+nohup python3 your_script.py > /dev/null 2>&1 &
+
+python script.py > output.log 2>&1 &
+
+ (myenv) k@kimlab869:~/Demo_okx$ > nohup.out
+ps ax | grep .py
+curl ipinfo.io/ip
+top   free -h
+
+
+https://raw.githubusercontent.com/doobae/Demo_okx/main/demo_Succokx05_movavg240708.py?token=GHSAT0AAAAAACUL3R2MYL5BVO2LWDGXUEAYZU5FWSQ
+
+-> chmod ??nohup python3 bitcoinAutoTrade.py > output.log &  -> ps ax | grep .py ->  kill -9 PID  -> jobs
+
+sudo rm -rf /var/log/*.log.*
+sudo rm -rf /var/log/journal/*
+주기적인 파일정리
+df -h    : 파일 용량 확인
+#청소파일 
+sudo rm -rf /tmp/*   : tmp 파일 삭제
+sudo apt-get clean
+
+sudo apt update
+sudo apt install cron
+sudo systemctl status cron
+sudo nano /usr/local/bin/cleanup.sh
+
+#!/bin/bash
+sudo rm -rf /tmp/*  :  tmp 안 파일 삭제
+sudo rm -rf /var/log/*.log
+sudo rm -rf /var/log/*.gz
+
+ls /usr/share/consolefonts/  : 글꼴 목록 확인
+
+
+# 삭제할 디렉토리들
+DIRS=(
+    "/tmp"
+    "/var/cache"
+    "/var/log"
+)
+
+# 7일이 지난 파일을 삭제하는 함수
+delete_old_files() {
+    local dir=$1
+    find "$dir" -type f -mtime +7 -exec rm -f {} \;
+}
+
+# 각 디렉토리에 대해 7일 이상 된 파일 삭제
+for dir in "${DIRS[@]}"; do
+    delete_old_files "$dir"
+done
+#END 
+sudo chmod +x /usr/local/bin/cleanup.sh
+sudo crontab -e
+0 3 * * 0 /usr/local/bin/cleanup.sh
+sudo systemctl status cron
+sudo systemctl enable cron         #부팅시 자동 시작
+dpkg -l | grep cron
+
+#python 3.8.9 설치후 가상환경 
+
+k@k:/usr/src/Python-3.8.9$
+1. 필수 패키지 업데이트 및 설치
+
+먼저 시스템 패키지를 업데이트하고 Python 빌드를 위한 필수 패키지를 설치합니다.
+
+bash
+
+sudo apt update
+sudo apt install build-essential libssl-dev zlib1g-dev libncurses5-dev libncursesw5-dev libreadline-dev libsqlite3-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev liblzma-dev tk-dev
+
+2. Python 3.8.9 소스 코드 다운로드 및 설치
+    Python 3.8.9 버전을 다운로드합니다.
+    bash
+cd /usr/src
+sudo wget https://www.python.org/ftp/python/3.8.9/Python-3.8.9.tgz
+다운로드한 파일의 압축을 해제합니다.
+bash
+sudo tar xzf Python-3.8.9.tgz
+Python을 컴파일하고 설치합니다.
+bash
+    cd Python-3.8.9
+    sudo ./configure --enable-optimizations
+    sudo make altinstall
+
+    *참고: make altinstall 명령어는 시스템의 기본 Python 버전을 덮어쓰지 않도록 합니다. make install을 사용하면 기본 Python 버전이 변경될 수 있습니다.
+
+3. Python 3.8.9 버전 확인 :설치가 완료되면 Python 3.8.9 버전이 제대로 설치되었는지 확인합니다.
+bash
+python3.8 --version
+4. venv 모듈을 사용하여 가상환경 생성
+venv 모듈을 사용하여 가상환경을 만듭니다. Python 3.8.9 설치에 따라 venv 모듈도 포함되어 있으므로 별도의 설치가 필요 없습니다.
+    가상환경을 생성할 디렉터리로 이동합니다.
+    bash
+cd /path/to/your/project
+가상환경을 생성합니다.
+bash
+python3.8 -m venv venv_name
+가상환경을 활성화합니다.
+bash
+source venv_name/bin/activate
+가상환경이 활성화되면 pip를 최신 버전으로 업데이트합니다.
+bash
+
+    pip install --upgrade pip
+
+이제 Python 3.8.9을 사용한 가상환경이 설정되었습니다.
+ps -e | grep X
+
+그래픽카드확인
+nvidia-smi
+그래픽드라이버 확인
+
+
+
+
+
+
