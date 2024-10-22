@@ -1,0 +1,197 @@
+관리자권한 부여
+sudo usermod -aG sudo username(k2)
+su - username
+su - 로 전환
+sudo visudo   관리자모드 설정
+k2 ALL=(ALL) NOPASSWD:ALL   관리자모드 설정
+
+curl 사용 
+sudo apt update
+sudo apt install curl
+curl -4 ifconfig.me  ->    118.129.176.101 , 115.92.157.113, 
+upbit API IP :  125.240.27.173,118.129.176.103,118.129.176.21,125.240.27.61,218.150.4.131 (YJ Newlight) ((2024/08/03)
+df -h  : 용량 확인 
+sudo nano /etc/default/console-setup  : 폰트 크기 설정
+pip install -r requirements.txt
+k2@debian:~$
+에서
+sudo passwd root
+
+python3 --version : 파이썬 버전 확인
+sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target : 전원 유지 기능
+sudo apt remove xscreensaver   : 화면 보호기 제거 기능
+
+2. venv 모듈 설치
+sudo apt update
+sudo apt install python3-venv
+# 가상환경 생성
+python3 -m venv myenvk2~
+source myenvk/bin/activate       :  노트북 리눅스(영주창원)
+source myenvk2/bin/activate     :  리눅스채굴
+source myenvk3/bin/activate     :  태평서버k3 python 실행
+source venv_k38/bin/activate     :   서버 k의 가상환경 venv_k38 활성화
+source myenvk5/bin/activate     :   데비안 리눅스 KASPA 채굴 (   kaspa:qypu4a44ad9yjhuh6asnwqfrrfzr0yq8l92979z8e85d3mxckt9cevqr360k5c8   : 파이오넥스)
+cd SRBMiner-Multi-2-2-8
+./SRBMiner-MULTI --algorithm kaspa --pool stratum+tcp://pool.woolypooly.com:3112 --wallet kaspa:qypu4a44ad9yjhuh6asnwqfrrfzr0yq8l92979z8e85d3mxckt9cevqr360k5c8
+
+root@raspberrypi:~# 
+source myenvkpi/bin/activate   : 라즈베리파이 가상환경 활성화
+외부 접속 시에
+curl ifconfig.me 
+
+nohup python3 Auto.py > output1.log 2>&1 &
+nohup python3 /path/to/A1.py > /dev/null 2>&1 &
+nohup python3 your_script.py > /dev/null 2>&1 &
+
+주기적인 파일정리
+df -h    : 파일 용량 확인
+#청소파일 
+sudo rm -rf /tmp/*   : tmp 파일 삭제
+sudo apt-get clean
+
+sudo apt update
+sudo apt install cron
+sudo systemctl status cron
+sudo nano /usr/local/bin/cleanup.sh
+
+#!/bin/bash
+sudo rm -rf /tmp/*  :  tmp 안 파일 삭제
+sudo rm -rf /var/log/*.log
+sudo rm -rf /var/log/*.gz
+
+ls /usr/share/consolefonts/  : 글꼴 목록 확인
+
+
+cd /us
+
+3. Python 3.8.9 버전 확인 :설치가 완료되면 Python 3.8.9 버전이 제대로 설치되었는지 확인합니다.
+bash
+python3.8 --version
+4. venv 모듈을 사용하여 가상환경 생성
+venv 모듈을 사용하여 가상환경을 만듭니다. Python 3.8.9 설치에 따라 venv 모듈도 포함되어 있으므로 별도의 설치가 필요 없습니다.
+    가상환경을 생성할 디렉터리로 이동합니다.
+    bash
+cd /path/to/your/project
+가상환경을 생성합니다.
+bash
+python3.8 -m venv venv_name
+가상환경을 활성화합니다.
+bash
+source venv_name/bin/activate
+가상환경이 활성화되면 pip를 최신 버전으로 업데이트합니다.
+bash
+
+    pip install --upgrade pip
+
+이제 Python 3.8.9을 사용한 가상환경이 설정되었습니다.
+ps -e | grep X
+
+그래픽카드확인
+nvidia-smi
+그래픽드라이버 확인
+#리눅스에서 OKX 모듈 임포트
+리눅스에서 ccxt, pandas, numpy, time, 그리고 datetime 모듈을 설치하려면, 주로 Python 패키지 관리자(PIP)를 사용합니다. 다음 절차에 따라 필요한 모듈을 설치할 수 있습니다.
+1. pip 설치 여부 확인
+
+먼저 pip가 설치되어 있는지 확인하세요. 설치되지 않았다면, 아래 명령어로 설치할 수 있습니다:
+
+bash
+
+sudo apt update
+sudo apt install python3-pip
+
+2. 필수 모듈 설치
+
+각 모듈을 설치하려면 다음 명령어를 입력하세요:
+
+bash
+pip install plotly
+pip3 install ccxt pandas numpy
+
+time과 datetime 모듈은 Python 표준 라이브러리에 포함되어 있어 별도의 설치가 필요하지 않습니다.
+3. 설치 확인
+
+설치가 성공적으로 완료되었는지 확인하려면 Python 환경에서 모듈을 임포트해 보세요:
+
+bash
+
+python3
+
+Python 인터프리터가 실행되면 다음 명령어를 입력해 모듈이 제대로 설치되었는지 확인합니다:
+
+python
+
+import ccxt
+import pandas as pd
+import numpy as np
+import time
+from datetime import datetime
+
+오류가 없다면 설치가 성공적으로 완료된 것입니다.
+
+# VNC 서버 원격 작업 방법 
+VNC 뷰어를 통한 SSH 접속 방법
+1. 서버에 VNC 서버 설치 및 설정
+
+먼저, 원격 서버에 VNC 서버를 설치하고 설정해야 합니다. 우분투를 기준으로 설명드리겠습니다.
+
+1.1 VNC 서버 설치
+
+bash
+
+sudo apt update
+sudo apt install tightvncserver
+
+1.2 VNC 서버 실행
+
+bash
+
+vncserver
+
+처음 실행할 때, 비밀번호를 설정하라는 메시지가 나옵니다. 이 비밀번호는 VNC 뷰어에서 접속할 때 필요합니다.
+2. 로컬 머신에서 SSH 터널링 설정
+
+VNC는 기본적으로 암호화되지 않은 연결을 사용하므로, SSH를 사용해 안전한 연결을 만들기 위해 터널링을 설정합니다.
+
+2.1 SSH 터널링 명령어 로컬 머신에서 터미널을 열고, 다음 명령을 입력하여 SSH 터널링을 설정합니다:
+
+bash
+
+ssh -L 5901:localhost:5901 user@remote_server_ip
+
+    user@remote_server_ip는 SSH로 접속할 원격 서버의 사용자 이름과 IP 주소입니다.
+    5901은 VNC 서버의 기본 포트입니다.
+
+이 명령어는 로컬 머신의 5901 포트를 원격 서버의 5901 포트로 터널링합니다. 이후 로컬 VNC 클라이언트는 로컬 5901 포트에 연결하여 SSH 터널을 통해 안전하게 원격 서버에 접속할 수 있습니다.
+3. VNC 뷰어로 연결
+
+3.1 VNC 뷰어 설치 만약 VNC 뷰어가 설치되지 않았다면, RealVNC 같은 VNC 클라이언트를 다운로드하고 설치합니다.
+
+3.2 VNC 뷰어 설정 VNC 뷰어를 실행한 후, 연결할 호스트를 입력할 때 localhost:5901을 입력합니다. 이는 로컬 머신에서 터널링한 포트로 연결하게 됩니다.
+
+예시:
+
+makefile
+
+localhost:5901
+
+3.3 접속 설정한 VNC 비밀번호를 입력하면 원격 데스크톱에 접속할 수 있습니다.
+4. 추가 설정 (선택 사항)
+
+    VNC 서버를 백그라운드에서 실행하려면 vncserver 명령 대신 다음을 사용하여 시작할 수 있습니다:
+
+    bash
+
+vncserver :1 -geometry 1920x1080 -depth 24
+
+여기서 :1은 VNC 세션의 디스플레이 번호, -geometry는 해상도, -depth는 색 깊이를 지정합니다.
+
+SSH를 자동화하려면 SSH 키 기반 인증을 설정하고, 터널링 명령어를 스크립트로 만들어 자동으로 실행되도록 할 수 있습니다.
+
+
+
+
+
+
+
+
