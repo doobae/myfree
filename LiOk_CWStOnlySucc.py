@@ -54,8 +54,8 @@ def check_balance():
     try:
         balance = exchange.fetch_balance()
         usdt_balance = balance['total'].get('USDT', 0)
-        PNL_LOWER_BOUND = usdt_balance * -0.3  # 잔고의 1%
-        PNL_UPPER_BOUND = usdt_balance * 0.01  # 잔고의 5%
+        PNL_LOWER_BOUND = usdt_balance * -0.03  # 잔고의 1%
+        PNL_UPPER_BOUND = usdt_balance * 0.03  # 잔고의 5%
         print(f"Current Balance (USDT): {usdt_balance}")
         print(f"PNL Lower Bound: {PNL_LOWER_BOUND}, PNL Upper Bound: {PNL_UPPER_BOUND}")
         return usdt_balance
@@ -144,12 +144,12 @@ while True:
     # 스토캐스틱 크로스 상태 확인
     if current_position is None:  # 현재 포지션이 없을 때
         if k > d:  # 크로스업
-            place_order(symbol, 'buy', usdt_balance * 0.0015)
+            place_order(symbol, 'buy', usdt_balance * 0.0005)
     elif current_position:  # 현재 포지션이 있을 때
         if current_position['side'] == 'long':
             # 상승 방향일 때만 주문
             if k > d:  
-                place_order(symbol, 'buy', usdt_balance * 0.0015)
+                place_order(symbol, 'buy', usdt_balance * 0.0005)
         elif current_position['side'] == 'short':
             # 감소 방향일 때는 더 이상 주문하지 않음
             if k < d:  # 크로스다운
